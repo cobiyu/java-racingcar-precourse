@@ -14,7 +14,7 @@ class CarFactoryTest {
 		String carName1 = "car1";
 		String carName2 = "car2";
 		String carName3 = "car3";
-		String csvCarName = carName1 + "," + carName2 + ",";
+		String csvCarName = carName1 + "," + carName2 + "," + carName3;
 
 		Cars cars = CarFactory.generateCarsBy(csvCarName);
 
