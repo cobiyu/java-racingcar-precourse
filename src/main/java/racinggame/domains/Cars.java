@@ -12,12 +12,14 @@ public class Cars {
 	private static final int MIN_RACING_NUMBER = 0;
 	private static final int MAX_RACING_NUMBER = 9;
 	private final List<Car> carList;
+	private int moveCount;
 
 	/**
 	 * constructor
 	 */
 	public Cars(List<Car> carList) {
 		this.carList = carList;
+		moveCount = 0;
 	}
 
 	/**
@@ -29,6 +31,8 @@ public class Cars {
 			MovingType movingType = MovingType.of(randomNumber);
 			car.moving(movingType);
 		}
+		
+		moveCount++;
 	}
 
 	/**
@@ -49,6 +53,13 @@ public class Cars {
 	 */
 	public List<Car> getCarList() {
 		return carList;
+	}
+
+	/**
+	 * getter moveCount
+	 */
+	public int getMoveCount() {
+		return moveCount;
 	}
 
 	/**
